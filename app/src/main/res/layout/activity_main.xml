@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/music_action_bar"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rect_music_bar"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/song_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="野心"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/song_singer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="薛之谦"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/song_pre"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:tint="@color/selector_color_music_icon_button"
+                        android:src="@drawable/ic_music_pre" />
+
+                    <ImageView
+                        android:id="@+id/song_play_or_pause"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:tint="@color/selector_color_music_icon_button"
+                        android:src="@drawable/ic_music_pause" />
+
+                    <ImageView
+                        android:id="@+id/song_next"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:tint="@color/selector_color_music_icon_button"
+                        android:src="@drawable/ic_music_next" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/song_play_mode"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_music_random"
+                    app:tint="@color/selector_color_music_icon_button" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignStart="@id/music_action_bar"
+        android:layout_marginBottom="5dp"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/song_cover_box"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/song_cover"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <com.king.view.arcseekbar.ArcSeekBar
+            android:id="@+id/song_progress"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:arcNormalColor="#95A3A3A3"
+            android:layout_centerInParent="true"
+            app:arcShowLabel="false"
+            app:arcShowTick="false"
+            app:arcStrokeWidth="2dp"
+            app:arcThumbColor="#6495ed"
+            app:arcThumbRadius="0dp" />
+
+    </RelativeLayout>
+</RelativeLayout>
